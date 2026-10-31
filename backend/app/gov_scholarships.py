@@ -108,7 +108,7 @@ def get_official_scholarship_seeds(query: str) -> List[Tuple[str, str]]:
         seeds.append(("NSP UGC Schemes", "https://scholarships.gov.in"))
     elif "post matric" in q_lower or "pre matric" in q_lower or "merit" in q_lower:
         seeds.append(("National Scholarship Portal Official", "https://scholarships.gov.in"))
-        seeds.append(("MyScheme Government Scholarships", "https://www.myscheme.gov.in/category/education-and-learning"))
+        seeds.append(("MyScheme Government Scholarships", "https://www.myscheme.gov.in"))
     else:
         seeds.append(("National Scholarship Portal (Government of India)", "https://scholarships.gov.in"))
         seeds.append(("MyScheme Educational Schemes Portal", "https://www.myscheme.gov.in"))
