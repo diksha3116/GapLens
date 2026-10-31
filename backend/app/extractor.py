@@ -111,10 +111,9 @@ async def fetch_and_extract_source(source_info: Dict[str, str], timeout_seconds:
                 result_payload["amounts_found"] = _find_amounts_in_text(text)
 
             elif resp.status_code in [401, 403, 404, 500, 502, 503]:
-    result_payload["http_status"] = resp.status_code
-    result_payload["verification_status"] = "UNREACHABLE_HTTP_ERROR"
-    logger.warning(f"HTTP {resp.status_code} received for URL: {url}")
-
+                result_payload["http_status"] = resp.status_code
+                result_payload["verification_status"] = "UNREACHABLE_HTTP_ERROR"
+                logger.warning(f"HTTP {resp.status_code} received for URL: {url}")
     except httpx.TimeoutException:
         logger.warning(f"Connection timed out for URL: {url}")
         result_payload["http_status"] = 408
