@@ -148,7 +148,7 @@ export const QueryInspectionModal: React.FC<QueryInspectionModalProps> = ({
                 )}
               </div>
               <p className="text-xs text-slate-400">
-                Connected to <span className="font-mono text-cyan-400">http://127.0.0.1:8001/api/analyze</span>
+                Connected to <span className="font-mono text-cyan-400">{(import.meta as any).env?.VITE_API_BASE_URL || "http://127.0.0.1:8001"}/api/analyze</span>
               </p>
             </div>
           </div>
